@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- FIRST LESSON FROM VIDEO 4: HEAD TAG AND META TAGS -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my websites description">
+    <meta name="keywords" content="sougata, website, html, leo">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <!-- Those are the metadata for the webpage, robots refer that whether the page will be indexed in se or not -->
+
+    <title>My HTML tutorial</title>
+    <!-- This will be the title of the webpage -->
+
+    <link rel="stylesheet" href="leo.css">
+    <!-- This is how to add external css -->
+
+    <script src="leo.js"></script>
+    <!-- This is how to include external Javascript -->
+</head>
+
+<body>
+
+    <!-- SECOND LESSON FROM VIDEO 5: EMMET, HEADINGS AND PARAGRAPHS -->
+
+    <h1>Leo</h1>
+    <h2>Leo</h2>
+    <h3>Leo</h3>
+    <h4>Leo</h4>
+    <h5>Leo</h5>
+    <h6>Leo</h6>
+    <p>Lorem ipsum, dolor sit amet consectetur <strong>This is strong</strong> adipisicing elit. Dicta eum eaque praesentium magni voluptatibus,
+        blanditiis eveniet sint <em>This is emphasized</em> necessitatibus quae <strike>This is striked</strike> vel impedit alias expedita corrupti delectus odit possimus 
+        temporibus <b>This is Bold</b> porro <i>This is Italic</i> ullam <b><i>Bold and italic</i></b> aperiam cumque optio dolorem </p>
+    <!-- To get sample text, write 'Lorem30' to get 30 words or as many as you want -->
+
+    <!-- For getting 3 paragraphs next, we can write 'p*3' -->
+    <p>first <br>This gets displayed to a new line due to the br tag</p>
+    <p>This has a horizontal line above due to the hr tag<br>second</p>
+    <p>third</p>
+    <p>If i want to go to next line while writing on this one I write ctrl+enter</p>
+    <!-- ctrl+enter allows us to save time by not going to the end of the line and then going to a new line --> <hr>
+
+
+    <!-- THIRD LESSON FROM VIDEO 6: LINKS AND IMAGES -->
+
+    <a href="https://google.com">Go to google</a>
+    <br><br>
+    <a href="https://youtube.com" target="_blank">Go to youtube in a new tab due to the target attribute</a> 
+    <br><br>
+    <a href="/test.html" target="_blank">Link to open html page present in the same directory</a> <br><br>
+
+    <img src="leoimg.jpg" alt="This is an alternative text to be shown in case the image is not available"> <br>
+    <!-- The src attribute can show either local images, or images from links -->
+    <img src="leo.jpg" alt="My signature" height="50" width="150"> <br>
+
+    <!-- <img src="https://source.unsplash.com/random" alt="Random image" width="300" height="300"> -->
+    <!-- Height and width are not recommended to set this way, it's supposed to be set in css --> <br><br><hr>
+
+
+    <!-- FOURTH LESSON FROM VIDEO 7: LISTS AND TABLES -->
+
+    <h3>Lists</h3>
+    <ul type="circle">
+        <li>First item of unordered list</li>
+        <li>Second item of unordered list</li>
+        <li>Third item of unordered list</li>
+    </ul>
+    <ol type="1">
+        <li>First item of ordered list</li>
+        <li>Second item of ordered list</li>
+        <li>Third item of ordered list</li>
+    </ol>
+
+    <h3>Tables</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sougata</td>
+                <td>Nayak</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Arjun</td>
+                <td>Lal</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Srivastava</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table> <hr>
+
+
+    <!-- FIFTH LESSON FROM VIDEO 8: FORMS AND INPUT TAGS -->
+
+    <h2>Forms</h2>
+    <form action="backend.php"> <!-- The actition attribute defines that where should we submit the form -->
+        <label for="name"> Name</label>
+        <!-- The label tag allows us to create a label 'for' any id, and in the form we get to the input just
+             by clicking the label, it just gives a little for functionality over normal naming -->
+        <div>
+            <input type="text" name="MyName" id=name>
+        </div> <br>
+        <div> Age: <input type="number" name="MyAge"></div> <br>
+        <div> Email: <input type="email" name="MyEmail"></div> <br>
+        <div> DOB: <input type="date" name="MyDOB"></div> <br>
+
+        <div> Write about yourself: <textarea name="about" cols="90" rows="5"></textarea></div>
+
+        <br><label for="car">Select a car of your choice</label>
+        <select name="myCar" id="car">
+            <option value="swf">Swift</option>
+            <option value="hyn">Hyundai</option>
+            <option value="mer" selected>Mercedes</option>
+        </select>
+    <!-- The select tag allows us to choose from given options, selected gives a predefined selected option -->
+
+        <div> <br>
+            Gender: Male<input type="radio" name="myGender">
+                    Female<input type="radio" name="myGender"> 
+    <!-- Only one is selectable as both have same name 'myGender', if both had diff name, both will be selectable -->
+        </div>
+        <div> Do you agree to terms and conditons: <input type="checkbox" name="isAgree" checked></div> <br>
+        <!-- By writing checked we get an already checked checkbox -->
+        <div> 
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+        <!-- In input tag, the name attribute defnies that by which name the backend must search for that input -->
+        <!-- The div tag reserves the whole line for things inside it -->
+    </form> <hr>
+
+
+    <!-- SIXTH LESSON FROM VIDEO 9: INLINE AND BLOCK ELEMENTS  -->
+
+    <!-- Inline elements just take the space it required whereas block elements take up the whole line -->
+    <p>P is block element.</p> <p>That is why this will is in next line.</p>
+    <span>span is inline element.</span> <span>That is why these two are in same line.</span> <hr>
+
+
+    <!-- SEVENTH LESSON FROM VIDEO 10: ID AND CLASS -->
+
+    <!-- Ids are an unique identifiers of elements through which we can call them later -->
+    <!-- Classes are a way to group items by putting them in certain groups and manipulate them together -->
+    <!-- An element can me of multiple classes, which can be defined by space separated values: class="RedBG BlackBorder" -->
+    
+    <p class="redbg blackBorder"></p>  <!-- This was created using 'p.redbg.blackBorder' -->
+    <!-- We can create any element with certain class by writing element.className for any number of classes -->
+    
+    <!-- In the same way we can create elements using ids by writing # -->
+    <span class="myClass" id="myId"></span> <!-- We got this by 'span.myClass#myId' -->
+
+    <!-- Emmet takes div tag as default, as '.class1.class2' will create a div -->
+    <div class="class1 class2"></div>
+
+
+    <!-- EIGHTH LESSON FROM VIDEO 11: HTML ENITITES -->
+
+    <!-- Entities are the way to put reserved characters in html -->
+    <p>This line will have one space here '  ' though 2 spaces are given as html reduces all spaces to 1</p>
+    <p>To have 2 spaces we write ' &nbsp;'</p>
+
+    <p>Also we cannot  show tags in text just by writing <div></p>
+    <p>To show tags we write &lt;div&gt;</p>
+
+    <p>We can show some special symbols as well using &pound; &copy; &rArr;</p>
+    <p>Empty characters can be sent using &#8203;</p> <hr>
+
+
+    <!-- NINETH LESSON FROM VIDEO 12: SEMANTIC TAGS -->
+
+    <!-- Semantic elements in HTML are special tags which tell the exact use of a certain part of the webpage -->
+    <!-- It tells whether a part is header, footer, nav, figure, etc  -->
+    <p>Here is an example of the detail and summary semantic tag</p>
+    <details>
+        <summary>Details</summary>
+        Something small enough to escape casual notice.
+    </details> <hr>
+</body>
+</html>
